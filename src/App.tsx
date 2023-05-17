@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import "./App.css";
+
+import Layout from "./components/Layout";
+import Ex1 from "./components/Ex1";
+import Ex2 from "./components/Ex2";
+import Ex3 from "./components/Ex3";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+            <Route path="/ex1" element={<Ex1 />} />
+            <Route path="/ex2" element={<Ex2 />} />
+            <Route path="/ex3" element={<Ex3 />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
