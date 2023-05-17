@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import UserMenu from "../UserMenu";
+// import UserMenu from "../UserMenu";
 
 const Header = (props: any) => {
   return (
@@ -16,7 +16,7 @@ const Header = (props: any) => {
         </Link>
       </div>
       <div className="usermenu-container">
-        <UserMenu name={props.user.name} img={props.user.img} />
+        {/* <UserMenu name={props.user.name} img={props.user.img} /> */}
       </div>
     </header>
   );
